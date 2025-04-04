@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pose ta question à Mistral</title>
+</head>
+<body>
+    <h1>Pose ta question à l'IA Mistral</h1>
+    <form action="/ask" method="post">
+        <input type="text" name="question" placeholder="Écris ta question ici" required style="width: 300px;">
+        <button type="submit">Envoyer</button>
+    </form>
+
+    {% if response %}
+        <h2>Réponse :</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
